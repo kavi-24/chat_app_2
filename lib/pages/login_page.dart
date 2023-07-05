@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.of(context).pop();
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => HomePage(),
+          builder: (context) => const HomePage(),
         ),
       );
     } else {
@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
       showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog(
+        return const AlertDialog(
           backgroundColor: Colors.deepPurple,
           title: Center(
             child: Text(
@@ -212,14 +212,14 @@ class _LoginPageState extends State<LoginPage> {
                         if (credential != null) {
                           Navigator.of(context).pushReplacement(
                             MaterialPageRoute(
-                              builder: (context) => HomePage(),
+                              builder: (context) => const HomePage(),
                             ),
                           );
                         } else {
                           wrongEmailMessage();
                         }
                       },
-                      child: SquareTile(imagePath: 'images/google.png')
+                      child: const SquareTile(imagePath: 'images/google.png')
                     ),
                     // SizedBox(width: 25),
                     // // apple button
@@ -241,10 +241,10 @@ class _LoginPageState extends State<LoginPage> {
                     GestureDetector(
                       onTap: () => Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                          builder: (context) => RegisterPage(),
+                          builder: (context) => const RegisterPage(),
                         ),
                       ),
-                      child: Text(
+                      child: const Text(
                         'Register now',
                         style: TextStyle(
                           color: Colors.blue,

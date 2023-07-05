@@ -5,10 +5,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '/components/my_button.dart';
 import '/components/my_textfield.dart';
-import '/components/square_tile.dart';
 
 class RegisterPage extends StatefulWidget {
-  RegisterPage({super.key});
+  const RegisterPage({super.key});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -96,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       Navigator.pop(context);
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                          builder: (context) => HomePage(),
+                          builder: (context) => const HomePage(),
                         ),
                       );
                     }
@@ -145,7 +144,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   GestureDetector(
                     onTap: () => Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => LoginPage(),
+                        builder: (context) => const LoginPage(),
                       ),
                     ),
                     child: const Text(
