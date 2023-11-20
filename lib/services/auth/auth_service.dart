@@ -47,4 +47,9 @@ class AuthService {
     }
   }
 
+  // forgot password
+  Future<void> sendPasswordResetEmail(String email) async {
+    await _firebaseAuth.sendPasswordResetEmail(email: email);
+  }
+
 }

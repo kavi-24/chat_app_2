@@ -77,6 +77,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
               // sign in button
               MyButton(
+                text: "Sign In",
                 onTap: () async {
                   showDialog(
                     context: context,

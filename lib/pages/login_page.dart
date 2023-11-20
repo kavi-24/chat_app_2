@@ -1,3 +1,4 @@
+import 'package:chat_app_2/pages/forgot_password.dart';
 import 'package:chat_app_2/services/auth/auth_service.dart';
 import 'package:chat_app_2/pages/home_page.dart';
 import 'package:chat_app_2/pages/register_page.dart';
@@ -146,7 +147,7 @@ class _LoginPageState extends State<LoginPage> {
                   obscureText: true,
                 ),
 
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
 
                 // forgot password?
                 Padding(
@@ -154,10 +155,20 @@ class _LoginPageState extends State<LoginPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        'Forgot Password?',
-                        style: TextStyle(color: Colors.grey[600]),
+                      GestureDetector(
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const ForgotPassword(),
+                        ),
                       ),
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          color: Colors.grey.shade700,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
                     ],
                   ),
                 ),
@@ -166,6 +177,7 @@ class _LoginPageState extends State<LoginPage> {
 
                 // sign in button
                 MyButton(
+                  text: "Sign In",
                   onTap: signUserIn,
                 ),
 
